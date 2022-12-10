@@ -1,0 +1,51 @@
+.expenses-balance {
+    background-color: #EC755D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 12px;
+    min-height: 9.7rem;
+    width: 100%;
+}
+
+.expenses-balance__balance {
+    color: #fff;
+}
+
+.expenses-balance .balance {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.expenses-balance .amount {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.expenses-balance__logo {
+    width: 6rem;
+    height: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+    .expenses-balance {
+        min-height: 12.5rem;
+        padding: 1rem 3.2rem;
+    }
+
+    .expenses-balance .balance {
+        font-size: 1.8rem;
+    }
+
+    .expenses-balance .amount {
+        font-size: 3.2rem;
+        font-weight: 700;
+    }
+
+    .expenses-balance__logo {
+        width: 7.2rem;
+        height: 4.8rem;
+    }
+}

@@ -1,0 +1,14 @@
+.expenses {
+    height: 53.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 34.3rem;
+}
+
+@media screen and (min-width: 768px) {
+    .expenses {
+        width: 54rem;
+        height: 66rem;
+    }
+}
