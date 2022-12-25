@@ -5,11 +5,11 @@ import './Expenses.css';
 import ExpensesBalance from './ExpensesBalance';
 import ExpensesTracker from './ExpensesTracker';
 
-const Expenses = props => {
+const Expenses = () => {
 	return (
 		<div className='expenses'>
 			<ExpensesBalance />
-			<ExpensesTracker dataPoints={props.data} />
+			<ExpensesTracker />
 		</div>
 	);
 };

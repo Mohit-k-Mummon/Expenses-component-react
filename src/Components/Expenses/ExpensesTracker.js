@@ -1,8 +1,14 @@
+import { useContext } from 'react';
 import './ExpensesTracker.css';
 import Chart from '../Chart/Chart';
+import DataContext from '../../store/data-context';
 
-const ExpensesTracker = props => {
-	const dataPointsKeysAdded = [...props.dataPoints];
+const ExpensesTracker = () => {
+	// accessing Context
+	const ctx = useContext(DataContext);
+
+	// Variable we modify adding key values to items
+	const dataPointsKeysAdded = [...ctx];
 
 	for (let dataPoint of dataPointsKeysAdded) {
 		dataPoint.key = Math.random().toString();
@@ -11,7 +17,9 @@ const ExpensesTracker = props => {
 	return (
 		<div className='expenses-tracker'>
 			<h1>Spending - Last 7 days</h1>
+
 			<Chart dataPoints={dataPointsKeysAdded} />
+
 			<div className='expenses-tracker__total'>
 				<div className='expenses-tracker__total-month'>
 					<p>Total this month</p>

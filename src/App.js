@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
 
-import data from './data.json';
-
 import Expenses from './Components/Expenses/Expenses';
+import { DataContextProvider } from './store/data-context';
 
 function App() {
-	return <Expenses data={data} />;
+	return (
+		<DataContextProvider>
+			<Expenses />
+		</DataContextProvider>
+	);
 }
 
 export default App;
